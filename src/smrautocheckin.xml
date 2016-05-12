@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.4" type="plugin" group="user" method="upgrade" client="site">
-	<name>plg_user_smr_autocheckin</name>
+	<name>plg_user_smr_auto_checkin</name>
 	<author>Juha Auvinen / Saimiri Design</author>
 	<creationDate>2016-04-26</creationDate>
 	<copyright>(C) 2016 Saimiri Design. All rights reserved.</copyright>
@@ -8,7 +8,7 @@
 	<authorEmail>juha@saimiri.fi</authorEmail>
 	<authorUrl>www.github.com/saimiri</authorUrl>
 	<version>1.0.2</version>
-	<description>PLG_USER_SMR_AUTO_CHECKIN_DESC</description>
+	<description>SMR_AUTO_CHECKIN_DESC</description>
 	<files>
 		<filename plugin="smrautocheckin">smrautocheckin.php</filename>
 		<filename>index.html</filename>
@@ -19,8 +19,8 @@
 			<fieldset name="basic">
 				<field name="checkout_expiry_time" type="number"
 					default="60"
-					description="PLG_USER_SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_DESC"
-					label="PLG_USER_SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_LABEL" />
+					description="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_DESC"
+					label="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_LABEL" />
 			</fieldset>
 		</fields>
 	</config>
