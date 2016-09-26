@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.4" type="plugin" group="user" method="upgrade" client="site">
+<extension version="3.4" type="plugin" group="user" method="upgrade" client="administrator">
 	<name>plg_user_smr_auto_checkin</name>
 	<author>Juha Auvinen / Saimiri Design</author>
 	<creationDate>2016-04-26</creationDate>
