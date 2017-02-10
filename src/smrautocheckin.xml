@@ -3,24 +3,36 @@
 	<name>plg_user_smr_auto_checkin</name>
 	<author>Juha Auvinen / Saimiri Design</author>
 	<creationDate>2016-04-26</creationDate>
-	<copyright>(C) 2016 Saimiri Design. All rights reserved.</copyright>
+	<copyright>(C) 2017 Saimiri Design. All rights reserved.</copyright>
 	<license>Apache 2.0; see LICENSE.txt</license>
 	<authorEmail>juha@saimiri.fi</authorEmail>
 	<authorUrl>www.github.com/saimiri</authorUrl>
-	<version>1.0.2</version>
+	<version>1.1.0.18</version>
 	<description>SMR_AUTO_CHECKIN_DESC</description>
 	<files>
 		<filename plugin="smrautocheckin">smrautocheckin.php</filename>
 		<filename>index.html</filename>
 		<folder>language</folder>
+		<folder>models</folder>
 	</files>
 	<config>
 		<fields name="params">
-			<fieldset name="basic">
-				<field name="checkout_expiry_time" type="number"
-					default="60"
-					description="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_DESC"
-					label="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_LABEL" />
+			<fieldset name="basic" addrulepath="plugins/user/smrautocheckin/models/rules">
+				<field name="checkout_expiry_time"
+				       type="number"
+				       default="60"
+							 regex="[0-9]+"
+							 required="true"
+							 validate="regex"
+				       label="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_LABEL"
+				       description="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_DESC" />
+				<field name="tables"
+				       type="subform"
+				       formsource="plugins/user/smrautocheckin/models/forms/table.xml"
+				       layout="joomla.form.field.subform.repeatable"
+				       multiple="true"
+				       label="SMR_AUTO_CHECKIN_ADDITIONAL_TABLES_LABEL">
+				</field>
 			</fieldset>
 		</fields>
 	</config>

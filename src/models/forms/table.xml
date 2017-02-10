@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<form>
+	<fieldset addrulepath="plugins/user/smrautocheckin/models/rules">
+		<field name="table_name"
+					 type="text"
+					 default=""
+					 regex="^[a-zA-Z0-9_]+$"
+					 required="true"
+					 validate="regex"
+					 label="SMR_AUTO_CHECKIN_TABLE_NAME_LABEL"
+					 description="SMR_AUTO_CHECKIN_TABLE_NAME_DESC" />
+		<field name="checked_out_column"
+					 type="text"
+					 default="checked_out"
+					 regex="^[a-zA-Z0-9_]+$"
+					 required="true"
+					 validate="regex"
+					 label="SMR_AUTO_CHECKIN_CHECKED_OUT_COLUMN_LABEL"
+					 description="SMR_AUTO_CHECKIN_CHECKED_OUT_COLUMN_DESC" />
+		<field name="checked_out_time_column"
+					 type="text"
+					 default="checked_out_time"
+					 regex="^[a-zA-Z0-9_]+$"
+					 required="true"
+					 validate="regex"
+					 label="SMR_AUTO_CHECKIN_CHECKED_OUT_TIME_COLUMN_LABEL"
+					 description="SMR_AUTO_CHECKIN_CHECKED_OUT_TIME_COLUMN_DESC" />
+		<field name="checked_out_time_zone"
+					 type="list"
+					 default="GMT"
+					 multiple="false"
+					 required="true"
+					 validate="options"
+					 label="SMR_AUTO_CHECKIN_CHECKED_OUT_TIME_ZONE_LABEL"
+					 description="SMR_AUTO_CHECKIN_CHECKED_OUT_TIME_ZONE_DESC">
+			<option value="GMT">SMR_AUTO_CHECKIN_TIME_ZONE_GMT</option>
+			<option value="local">SMR_AUTO_CHECKIN_TIME_ZONE_LOCAL</option>
+		</field>
+		<field name="status_column"
+					 type="text"
+					 default="status"
+					 regex="^[a-zA-Z0-9_]+$"
+					 required="false"
+					 validate="regex"
+					 label="SMR_AUTO_CHECKIN_STATUS_COLUMN_LABEL"
+						description="SMR_AUTO_CHECKIN_STATUS_COLUMN_DESC" />
+		<field name="status_column_value"
+					 type="integer"
+					 default="1"
+					 first="-5"
+					 last="5"
+					 regex="^-?[0-9]$"
+					 required="false"
+					 step="1"
+					 validate="regex"
+					 label="SMR_AUTO_CHECKIN_STATUS_COLUMN_VALUE_LABEL"
+					 description="SMR_AUTO_CHECKIN_STATUS_COLUMN_VALUE_DESC" />
+	</fieldset>
+</form>
