@@ -179,7 +179,7 @@ class plgUserSmrAutoCheckin extends JPlugin
 		}
 		if ( !empty( $table->status_column ) &&
 			   ( !preg_match( $regex, $table->status_column ) ||
-			     !preg_match( '^/-?[0-9]+$/', $table->status_column_value ) ) ) {
+			     !preg_match( '/^-?[0-9]+$/', $table->status_column_value ) ) ) {
 			return false;
 		}
 		return true;

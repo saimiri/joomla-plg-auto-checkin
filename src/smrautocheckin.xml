@@ -7,7 +7,7 @@
 	<license>Apache 2.0; see LICENSE.txt</license>
 	<authorEmail>juha@saimiri.fi</authorEmail>
 	<authorUrl>www.github.com/saimiri</authorUrl>
-	<version>1.1.0.18</version>
+	<version>1.1.1.20</version>
 	<description>SMR_AUTO_CHECKIN_DESC</description>
 	<files>
 		<filename plugin="smrautocheckin">smrautocheckin.php</filename>
@@ -26,6 +26,15 @@
 							 validate="regex"
 				       label="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_LABEL"
 				       description="SMR_AUTO_CHECKIN_CHECKOUT_EXPIRY_TIME_DESC" />
+				<field name="debug_mode"
+				       type="radio"
+				       class="btn-group"
+				       default="0"
+				       label="SMR_AUTO_CHECKIN_DEBUG_MODE"
+				       description="">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<field name="tables"
 				       type="subform"
 				       formsource="plugins/user/smrautocheckin/models/forms/table.xml"
